@@ -19,3 +19,11 @@ $ cd ../SimpleApi
 $ docker build --tag simpleapi:lates
 4. запустить c Docker-container:
 $ docker run -p 8080:8080 simpleapi
+- работа приложения
+1.обращение к ендпоинту, возвращающему hostname:
+http://localhost:8080/api/v1/status
+2. по запросу GET -> вывод таблицы product из БД:
+http://localhost:8080/api/v1/products
+3.по запросу GET -> вывод строки c id 1  из таблицы  product в БД:
+http://localhost:8080/api/v1/products/1
+4. приложение также через запросы DELETE и POST удалять по id и изменять параметры.
